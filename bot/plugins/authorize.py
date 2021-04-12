@@ -11,7 +11,7 @@ from googleapiclient.errors import HttpError
 from bot.helpers.sql_helper import gDriveDB
 from bot.config import BotCommands
 from bot.helpers.utils import CustomFilters
-
+from bot import LOGGER
 
 OAUTH_SCOPE = "https://www.googleapis.com/auth/drive"
 REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
