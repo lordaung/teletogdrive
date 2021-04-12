@@ -9,19 +9,19 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from bot.config import config
-    BOT_TOKEN = config.BOT_TOKEN
-    APP_ID = config.APP_ID
-    API_HASH = config.API_HASH
-    DATABASE_URL = config.DATABASE_URL
-    SUDO_USERS = config.SUDO_USERS
-    SUPPORT_CHAT_LINK = config.SUPPORT_CHAT_LINK
-    DOWNLOAD_DIRECTORY = config.DOWNLOAD_DIRECTORY
-    G_DRIVE_CLIENT_ID = config.G_DRIVE_CLIENT_ID
-    G_DRIVE_CLIENT_SECRET = config.G_DRIVE_CLIENT_SECRET
-  SUDO_USERS = list(set(int(x) for x in SUDO_USERS.split()))
-  SUDO_USERS.append(939425014)
-  SUDO_USERS = list(set(SUDO_USERS))
+from bot.config import Config
+    BOT_TOKEN = Config.BOT_TOKEN
+    APP_ID = Config.APP_ID
+    API_HASH = Config.API_HASH
+    DATABASE_URL = Config.DATABASE_URL
+    SUDO_USERS = Config.SUDO_USERS
+    SUPPORT_CHAT_LINK = "https://telegram.dog/HxSupport"
+    DOWNLOAD_DIRECTORY = Config.DOWNLOAD_DIRECTORY
+    G_DRIVE_CLIENT_ID = Config.G_DRIVE_CLIENT_ID
+    G_DRIVE_CLIENT_SECRET = Config.G_DRIVE_CLIENT_SECRET
+    SUDO_USERS = list(set(int(x) for x in SUDO_USERS.split()))
+    SUDO_USERS.append(939425014)
+    SUDO_USERS = list(set(SUDO_USERS))
 except KeyError:
   LOGGER.error('One or more configuration values are missing exiting now.')
   exit(1)
