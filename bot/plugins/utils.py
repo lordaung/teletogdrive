@@ -5,11 +5,11 @@ from time import sleep
 from sys import executable
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, RPCError
-from bot.config import SUDO_USERS, DOWNLOAD_DIRECTORY
+from bot.config import AUTH_USERS, DOWNLOAD_DIRECTORY
 from bot import LOGGER
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(Config.SUDO_USERS), group=2)
+@Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(Config.AUTH_USERS), group=2)
 def _send_log(client, message):
   with open('log.txt', 'rb') as f:
     try:
@@ -25,7 +25,7 @@ def _send_log(client, message):
     except RPCError as e:
       message.reply_text(e, quote=True)
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['restart']) & filters.user(Config.SUDO_USERS), group=2)
+@Client.on_message(filters.private & filters.incoming & filters.command(['restart']) & filters.user(Config.AUTH_USERS), group=2)
 def _restart(client, message):
   shutil.rmtree(Config.DOWNLOAD_DIRECTORY)
   LOGGER.info('Deleted Config.DOWNLOAD_DIRECTORY successfully.')
