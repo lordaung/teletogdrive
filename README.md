@@ -1,6 +1,6 @@
 # Google Drive Uploader Telegram Bot
 **A Telegram bot to upload files from Telegram or Direct links to Google Drive.**
-- Find it on Telegram as [Google Drive Uploader](https://t.me/uploadgdrivebot)
+- Find it on Telegram as [HX Google Drive Uploader](https://t.me/Hx_GdriveBot)
 
 ## Features
 - [X] Telegram files support.
@@ -21,11 +21,11 @@
 ## Deploying
 
 ### Deploy on [Heroku](https://heroku.com)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/viperadnan-git/google-drive-telegram-bot/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
 
 ### How To Deploy Video Tutorial:
 
-[![](https://i.ytimg.com/vi/5Ke_q2_5mNU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAArIzsqRXHm_KX5WSxmyXRfrpt8A)](https://youtu.be/5Ke_q2_5mNU)
+[![](Ask Here)](https://t.me/HxSupport)
 
 
 ### Installation
@@ -35,11 +35,11 @@ apt install -y git python3 ffmpeg
 ```
 - Clone this git repository.
 ```sh 
-git clone https://github.com/viperadnan-git/google-drive-telegram-bot
+git clone https://github.com/Kirodewal/Gdrive-UploadBot
 ```
 - Change Directory
 ```sh 
-cd google-drive-telegram-bot
+cd Gdrive-UploadBot
 ```
 - Install requirements with pip3
 ```sh 
@@ -81,5 +81,5 @@ python3 -m bot
 - [Shivam Jha](https://github.com/lzzy12) for [Clone Feature](./bot/helpers/gdrive_utils/gDrive.py) from [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
 
 ## Copyright & License
-- Copyright (©) 2020 by [Adnan Ahmad](https://github.com/viperadnan-git)
+- Copyright (©) 2021 by [Kamlesh Kirodewal](https://github.com/Kirodewal)
 - Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](./LICENSE)
