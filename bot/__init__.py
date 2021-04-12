@@ -1,16 +1,8 @@
 import os
 import logging
 
-logging.basicConfig(
-    level=logging.INFO,
-    handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-LOGGER = logging.getLogger(__name__)
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
+class Config(oblect):
 
-
-class Config:
     # get a token from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
@@ -28,5 +20,16 @@ class Config:
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
 
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
+  
     SUDO_USERS = []
     
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+LOGGER = logging.getLogger(__name__)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
