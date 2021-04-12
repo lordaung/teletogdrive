@@ -9,7 +9,7 @@ from bot.config import Config
 from bot import LOGGER
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(SUDO_USERS), group=2)
+@Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(Config.SUDO_USERS), group=2)
 def _send_log(client, message):
   with open('log.txt', 'rb') as f:
     try:
@@ -25,7 +25,7 @@ def _send_log(client, message):
     except RPCError as e:
       message.reply_text(e, quote=True)
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['restart']) & filters.user(SUDO_USERS), group=2)
+@Client.on_message(filters.private & filters.incoming & filters.command(['restart']) & filters.user(Config.SUDO_USERS), group=2)
 def _restart(client, message):
   shutil.rmtree(Config.DOWNLOAD_DIRECTORY)
   LOGGER.info('Deleted Config.DOWNLOAD_DIRECTORY successfully.')
