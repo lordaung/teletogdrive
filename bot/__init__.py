@@ -23,6 +23,8 @@ class Config:
   
     SUDO_USERS = []
     
+    SUPPORT_CHAT_LINK = "https://t.me/HxSupport"
+    
 
 
 logging.basicConfig(
