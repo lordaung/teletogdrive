@@ -12,8 +12,8 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 if __name__ == "__main__":
-    if not os.path.isdir(DOWNLOAD_DIRECTORY):
-        os.makedirs(DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.DOWNLOAD_DIRECTORY)
     plugins = dict(
         root="bot/plugins"
     )
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         api_hash=Config.API_HASH,
         plugins=plugins,
         parse_mode="markdown",
-        workdir=DOWNLOAD_DIRECTORY
+        workdir=Config.DOWNLOAD_DIRECTORY
     )
     LOGGER.info('Starting Bot !')
     app.run()
