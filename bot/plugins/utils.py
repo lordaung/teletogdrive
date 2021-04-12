@@ -5,7 +5,7 @@ from time import sleep
 from sys import executable
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, RPCError
-from bot import SUDO_USERS, DOWNLOAD_DIRECTORY, LOGGER
+from bot.config import SUDO_USERS, DOWNLOAD_DIRECTORY, LOGGER
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(SUDO_USERS), group=2)
@@ -26,8 +26,8 @@ def _send_log(client, message):
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['restart']) & filters.user(SUDO_USERS), group=2)
 def _restart(client, message):
-  shutil.rmtree(DOWNLOAD_DIRECTORY)
-  LOGGER.info('Deleted DOWNLOAD_DIRECTORY successfully.')
+  shutil.rmtree(Config.DOWNLOAD_DIRECTORY)
+  LOGGER.info('Deleted Config.DOWNLOAD_DIRECTORY successfully.')
   message.reply_text('**♻️Restarted Successfully !**', quote=True)
   LOGGER.info(f'{message.from_user.id}: Restarting...')
   execl(executable, executable, "-m", "bot")
