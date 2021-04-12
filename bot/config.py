@@ -41,9 +41,8 @@ class Messages:
         "**Owned By: @HxBots\nCreated By: @Kirodewal**"
         ]
      
-     UPDATE.MSG = "** Latest Update 1: 12.04.2021**\n\n**<>Solved Bot Not Responding On Authentication Message<>**\n\n**<>Added Ytdl Support.<>**\n\n**<>Added 113 Sites Support.<>**\n\n**<>Added /copy Ya /clone Command.<>**\n\n**<>Added Support For Selecting Team/Shared Drive.<>**\n\n**<>Added Support For Parallel Processes [Upto 3].<>**"
+    UPDATE.MSG = "** Latest Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**"
 
-     
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
     FILE_NOT_FOUND_MESSAGE = "❗ **File/Folder not found.**\n__File id - {} Not found. Make sure it\'s exists and accessible by the logged account.__"
