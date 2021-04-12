@@ -1,7 +1,7 @@
 import os
 import logging
 
-class Config(oblect):
+class Config:
 
     # get a token from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
