@@ -21,7 +21,7 @@
 
 ## Deploying
 
-### Deploy on [Heroku](https://heroku.com)
+### Deploy on Heroku
 [![Deploy On Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?templete=https://github.com/kirodewal/Gdrive-UploadBot)
 
 ### How To Deploy:
@@ -61,7 +61,7 @@ pip3 install -r requirements.txt
 - `DATABASE_URL` - Postgres database url.
 - `DOWNLOAD_DIRECTORY` - Custom path for downloads. Must end with a forward `/` slash. (Default to `./downloads/`)
 
-### Deploy 
+### Run Code
 ```sh 
 python3 -m bot
 ```
