@@ -11,12 +11,12 @@
 - [X] Delete Google Drive Files.
 - [X] Empty Google Drive trash.
 - [X] youtube-dl support.
+- [X] Update command.
 
 ## ToDo 
 - [ ] Handle more exceptions.
 - [ ] LOGGER support.
 - [ ] Service account support.
-- [ ] Update command.
 
 ## Deploying
 
