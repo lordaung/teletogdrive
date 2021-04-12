@@ -9,7 +9,7 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from bot.config import Config
+class Config:
     BOT_TOKEN = os.environ.get('BOT_TOKEN')
     APP_ID = os.environ.get('APP_ID')
     API_HASH = os.environ.get('API_HASH')
