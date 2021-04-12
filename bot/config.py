@@ -1,5 +1,26 @@
 import os
 
+class Config:
+    # get a token from @BotFather
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+
+    # The Telegram API things
+    # Get these values from my.telegram.org
+    APP_ID = int(os.environ.get("APP_ID", 12345))
+    API_HASH = os.environ.get("API_HASH", "")
+
+     # Sql Database url
+    DATABASE_URL = os.environ.get("DATABASE_URL", "")
+
+    # the download location, where the HTTP Server runs
+    DOWNLOAD_DIRECTORY = "./DOWNLOADS"
+
+    G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
+
+    G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
+
+    SUDO_USERS = []
+
 class BotCommands:
   Download = ['download', 'dl']
   Authorize = ['auth', 'authorize']
