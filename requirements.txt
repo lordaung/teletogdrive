@@ -13,5 +13,7 @@ google-auth-oauthlib
 youtube_dl
 ffmpeg
 tenacity
-python-telegram-bot
 pyTelegramBotAPI
+python-telegram-bot==12.4.2
+requests==2.22.0                                     
+urllib3==1.25.7
