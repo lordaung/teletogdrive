@@ -18,5 +18,5 @@ class Config:
     DOWNLOAD_DIRECTORY = os.environ.get("DOWNLOAD_DIRECTORY", "./downloads/")
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
-    SUDO_USERS = int(os.environ.get("SUDO_USERS"))
+    SUDO_USERS = []
     
