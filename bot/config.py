@@ -2,13 +2,13 @@ import os
 
 class Config:
     BOT_TOKEN = os.environ.get("BOT_TOKEN")
-    APP_ID = os.environ.get("APP_ID")
+    APP_ID = int(os.environ.get("APP_ID"))
     API_HASH = os.environ.get("API_HASH")
     DATABASE_URL = os.environ.get("DATABASE_URL")
     DOWNLOAD_DIRECTORY = os.environ.get("DOWNLOAD_DIRECTORY", "./downloads/")
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
-    SUDO_USERS = os.environ.get("SUDO_USERS")
+    SUDO_USERS = int(os.environ.get("SUDO_USERS"))
     
 
 class BotCommands:
