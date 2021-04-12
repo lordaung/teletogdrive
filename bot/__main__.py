@@ -1,9 +1,8 @@
 import os
 import logging
 from pyrogram import Client
-from .config import APP_ID, API_HASH, BOT_TOKEN, DOWNLOAD_DIRECTORY
+from .config import Config
   
-
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -20,9 +19,9 @@ if __name__ == "__main__":
     )
     app = Client(
         "G-DriveBot",
-        bot_token=BOT_TOKEN,
-        api_id=APP_ID,
-        api_hash=API_HASH,
+        bot_token=Config.BOT_TOKEN,
+        api_id=Config.APP_ID,
+        api_hash=Config.API_HASH,
         plugins=plugins,
         parse_mode="markdown",
         workdir=DOWNLOAD_DIRECTORY
