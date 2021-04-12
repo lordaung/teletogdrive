@@ -12,6 +12,7 @@
 - [X] Empty Google Drive trash.
 - [X] youtube-dl support.
 - [X] Update command.
+- [X] Supports 100+ Sites For URL Upload
 
 ## ToDo 
 - [ ] Handle more exceptions.
