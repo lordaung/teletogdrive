@@ -25,7 +25,7 @@
     "SUPPORT_CHAT_LINK": {
       "description": "Support Chat link in valid url format.",
       "value": "https://GitHub.com/Kirodewal"
-      "required" "False"
+      "required" false
     },
     "DOWNLOAD_DIRECTORY": {
       "description": "Custom path for downloads. Must end with a forward slash.",
