@@ -69,4 +69,4 @@ def map(pos):
 def _start(client, message):
     client.send_message(chat_id = message.chat.id,
         text=tr.UPDATE_MSG.format(message.from_user.first_name),
-        disable_web_page_preview=True,
+        disable_web_page_preview=True
