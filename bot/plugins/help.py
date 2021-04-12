@@ -68,5 +68,5 @@ def map(pos):
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
 def _start(client, message):
     client.send_message(chat_id = message.chat.id,
-        text=tr.UPDATE.MSG.format(message.from_user.first_name),
+        text=tr.UPDATE_MSG.format(message.from_user.first_name),
         disable_web_page_preview=True,
