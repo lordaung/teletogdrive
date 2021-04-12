@@ -1,7 +1,7 @@
 import re
 import json
 from httplib2 import Http
-from bot import LOGGER, G_DRIVE_CLIENT_ID, G_DRIVE_CLIENT_SECRET
+from .config import LOGGER, G_DRIVE_CLIENT_ID, G_DRIVE_CLIENT_SECRET
 from bot.config import Messages
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -30,8 +30,8 @@ async def _auth(client, message):
     global flow
     try:
       flow = OAuth2WebServerFlow(
-              G_DRIVE_CLIENT_ID,
-              G_DRIVE_CLIENT_SECRET,
+              Config.G_DRIVE_CLIENT_ID,
+              Config.G_DRIVE_CLIENT_SECRET,
               OAUTH_SCOPE,
               redirect_uri=REDIRECT_URI
       )
