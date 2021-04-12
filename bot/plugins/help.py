@@ -59,9 +59,12 @@ def map(pos):
     else:
         button = [
             [
-                InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'Updates', callback_data = f"update")
+                InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")
+                
             ],
+            [
+                InlineKeyboardButton(text = 'Updates', callback_data = f"update")
+            ]
         ]
     return button
 
