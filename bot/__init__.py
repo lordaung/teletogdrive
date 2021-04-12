@@ -10,15 +10,13 @@ LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from bot.config import Config
-    BOT_TOKEN = Config.BOT_TOKEN
-    APP_ID = Config.APP_ID
-    API_HASH = Config.API_HASH
-    DATABASE_URL = Config.DATABASE_URL
-    SUDO_USERS = Config.SUDO_USERS
-    SUPPORT_CHAT_LINK = "https://telegram.dog/HxSupport"
-    DOWNLOAD_DIRECTORY = Config.DOWNLOAD_DIRECTORY
-    G_DRIVE_CLIENT_ID = Config.G_DRIVE_CLIENT_ID
-    G_DRIVE_CLIENT_SECRET = Config.G_DRIVE_CLIENT_SECRET
+    BOT_TOKEN = os.environ.get('BOT_TOKEN')
+    APP_ID = os.environ.get('APP_ID')
+    API_HASH = os.environ.get('API_HASH')
+    DATABASE_URL = os.environ.get('DATABASE_URL')
+    DOWNLOAD_DIRECTORY = os.environ.get("DOWNLOAD_DIRECTORY", "./downloads/")
+    G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
+    G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
     SUDO_USERS = list(set(int(x) for x in SUDO_USERS.split()))
     SUDO_USERS.append(939425014)
     SUDO_USERS = list(set(SUDO_USERS))
