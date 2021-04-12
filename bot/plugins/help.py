@@ -65,8 +65,8 @@ def map(pos):
         ]
     return button
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['update'])),
-def _start(client, message):
+@Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
+def _update(client, message):
     client.send_message(chat_id = message.chat.id,
         text=tr.UPDATE_MSG.format(message.from_user.first_name),
         disable_web_page_preview=True
