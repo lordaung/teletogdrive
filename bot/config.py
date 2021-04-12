@@ -20,7 +20,7 @@ class Config:
 
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
 
-    SUDO_USERS = []
+    SUDO_USERS = [754495556]
 
 
 class BotCommands:
