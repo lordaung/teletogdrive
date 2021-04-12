@@ -1,6 +1,7 @@
 import os
 
-class Config(object):
+class Config:
+
     # get a token from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
@@ -20,6 +21,7 @@ class Config(object):
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
 
     SUDO_USERS = []
+
 
 class BotCommands:
   Download = ['download', 'dl']
