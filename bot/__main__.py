@@ -1,12 +1,8 @@
 import os
 import logging
 from pyrogram import Client
-from bot import (
-  APP_ID,
-  API_HASH,
-  BOT_TOKEN,
-  DOWNLOAD_DIRECTORY
-  )
+from .config import APP_ID, API_HASH, BOT_TOKEN, DOWNLOAD_DIRECTORY
+  
 
 logging.basicConfig(
     level=logging.DEBUG,
