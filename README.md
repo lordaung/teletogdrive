@@ -22,11 +22,11 @@
 ## Deploying
 
 ### Deploy on [Heroku](https://heroku.com)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
+[![Deploy On Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
 
-### How To Deploy Video Tutorial:
+### How To Deploy:
 
-[![](Ask Here)](https://t.me/HxSupport)
+[Ask In Group](https://t.me/HxSupport)
 
 
 ### Installation
@@ -70,6 +70,7 @@ python3 -m bot
 
 - start - useless command
 - help - How to use me
+- update - What's Added Now!
 - auth - Authorizing GDrive Account
 - setfolder - Set Custom Upload Folder
 - copy - Copy GDrive Files
