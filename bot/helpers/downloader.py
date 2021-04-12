@@ -19,14 +19,14 @@ def download_file(url, dl_path):
   except Exception as error:
     try:
       filename = wget.download(url, dl_path)
-      return True, os.path.join(f"{DOWNLOAD_DIRECTORY}/{filename}")
+      return True, os.path.join(f"{Config.DOWNLOAD_DIRECTORY}/{filename}")
     except HTTPError:
       return False, error
 
 
 def utube_dl(link):
   ytdl_opts = {
-    'outtmpl' : os.path.join(DOWNLOAD_DIRECTORY, '%(title)s'),
+    'outtmpl' : os.path.join(Config.DOWNLOAD_DIRECTORY, '%(title)s'),
     'noplaylist' : True,
     'logger': LOGGER,
     'format': 'bestvideo+bestaudio/best',
@@ -37,7 +37,7 @@ def utube_dl(link):
       meta = ytdl.extract_info(link, download=True)
     except DownloadError as e:
       return False, str(e)
-    for path in glob.glob(os.path.join(DOWNLOAD_DIRECTORY, '*')):
+    for path in glob.glob(os.path.join(Config.DOWNLOAD_DIRECTORY, '*')):
       if path.endswith(('.avi', '.mov', '.flv', '.wmv', '.3gp','.mpeg', '.webm', '.mp4', '.mkv')) and \
           path.startswith(ytdl.prepare_filename(meta)):
         return True, path
