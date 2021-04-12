@@ -19,7 +19,8 @@ class Config:
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", "568fguijfdry.goohle.com")
 
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "FxvbXbjuyr357e34fcj8")
-
+    
+    # Array to store users who are authorized to use the bot
     SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
 
 
