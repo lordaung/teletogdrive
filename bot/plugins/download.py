@@ -28,11 +28,11 @@ def _download(client, message):
         link, filename = link.split('|')
         link = link.strip()
         filename.strip()
-        dl_path = os.path.join(f'{DOWNLOAD_DIRECTORY}/{filename}')
+        dl_path = os.path.join(f'{Config.DOWNLOAD_DIRECTORY}/{filename}')
       else:
         link = link.strip()
         filename = os.path.basename(link)
-        dl_path = DOWNLOAD_DIRECTORY
+        dl_path = Config.DOWNLOAD_DIRECTORY
       LOGGER.info(f'Download:{user_id}: {link}')
       sent_message.edit(Messages.DOWNLOADING.format(link))
       result, file_path = download_file(link, dl_path)
@@ -63,7 +63,7 @@ def _telegram_file(client, message):
   sent_message.edit(Messages.DOWNLOAD_TG_FILE.format(file.file_name, humanbytes(file.file_size), file.mime_type))
   LOGGER.info(f'Download:{user_id}: {file.file_id}')
   try:
-    file_path = message.download(file_name=DOWNLOAD_DIRECTORY)
+    file_path = message.download(file_name=Config.DOWNLOAD_DIRECTORY)
     sent_message.edit(Messages.DOWNLOADED_SUCCESSFULLY.format(os.path.basename(file_path), humanbytes(os.path.getsize(file_path))))
     msg = GoogleDrive(user_id).upload_file(file_path, file.mime_type)
     sent_message.edit(msg)
