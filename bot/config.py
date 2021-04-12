@@ -41,19 +41,7 @@ class Messages:
         "**Owned By: @HxBots\nCreated By: @Kirodewal**"
         ]
      
-     UPDATE.MSG = """** Latest Update 1: 12.04.2021**
-
-       **<>Solved Bot Not Responding On Authentication Message<>**
-
-       **<>Added Ytdl Support.<>**
-
-      **<>Added 113 Sites Support.<>**
-
-      **<>Added /copy Ya /clone Command.<>**
-
-      **<>Added Support For Selecting Team/Shared Drive.<>**
-
-      **<>Added Support For Parallel Processes [Upto 3].<>**"""
+     UPDATE.MSG = "** Latest Update 1: 12.04.2021**\n\n**<>Solved Bot Not Responding On Authentication Message<>**\n\n**<>Added Ytdl Support.<>**\n\n**<>Added 113 Sites Support.<>**\n\n**<>Added /copy Ya /clone Command.<>**\n\n**<>Added Support For Selecting Team/Shared Drive.<>**\n\n**<>Added Support For Parallel Processes [Upto 3].<>**"
 
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
