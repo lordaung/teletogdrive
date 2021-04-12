@@ -1,6 +1,6 @@
 import os
 
-class Config:
+class Config(object):
     # get a token from @BotFather
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
