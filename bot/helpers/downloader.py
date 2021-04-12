@@ -5,7 +5,8 @@ import youtube_dl
 from pySmartDL import SmartDL
 from urllib.error import HTTPError
 from youtube_dl import DownloadError
-from bot import DOWNLOAD_DIRECTORY, LOGGER
+from bot.config import Config
+from bot import  LOGGER
 
 
 def download_file(url, dl_path):
