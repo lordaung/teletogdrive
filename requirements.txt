@@ -14,3 +14,4 @@ youtube_dl
 ffmpeg
 tenacity
 python-telegram-bot
+pyTelegramBotAPI
