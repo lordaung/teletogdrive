@@ -9,6 +9,7 @@ def _start(client, message):
     client.send_message(chat_id = message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name),
         disable_web_page_preview=True,
+        reply_to_message_id = message.message_id,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -69,7 +70,7 @@ def map(pos):
 def _update(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.UPDATE_MSG[1],
-        reply_markup = InlineKeyboardMarkup(map(1)),
+        disable_web_page_preview=True,
         reply_to_message_id = message.message_id
     )
 
@@ -77,7 +78,6 @@ def _update(client, message):
 def _about(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.ABOUT_MSG[1],
-        reply_markup = InlineKeyboardMarkup(map(1)),
         reply_to_message_id = message.message_id,
         disable_web_page_preview=True
     )
