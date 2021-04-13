@@ -69,11 +69,22 @@ def map(pos):
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
 def _update(client, message):
     client.send_message(chat_id = message.chat.id,
-        text = tr.UPDATE_MSG.format(message.from_user.first_name),
-        disable_web_page_preview=True,
-        reply_to_message_id = message.message_id,
-        text = tr.HELP_MSG[msg],      reply_markup = InlineKeyboardMarkup(map(msg))
+        text = tr.Update_MSG[2],
+        reply_markup = InlineKeyboardMarkup(map(2)),
+        reply_to_message_id = message.message_id
     )
+
+update_callback_filter = filters.create(lambda _, __, query: query.data.startswith('update+'))
+
+@Client.on_callback_query(update_callback_filter)
+def update_answer(c, callback_query):
+    chat_id = callback_query.from_user.id
+    message_id = callback_query.message.message_id
+    msg = int(callback_query.data.split('+')[1])
+    c.edit_message_text(chat_id = chat_id,    message_id = message_id,
+        text = tr.UPDATE_MSG[msg],    reply_markup = InlineKeyboardMarkup(map(msg))
+    )
+
 
 def map(pos):
     if(pos==1):
@@ -94,6 +105,7 @@ def map(pos):
             ],
         ]
     return button
+
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
