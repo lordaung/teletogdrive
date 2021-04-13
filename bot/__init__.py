@@ -21,7 +21,7 @@ class Config:
 
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", "")
   
-    SUDO_USERS = 754495556
+    SUDO_USERS = "754495556"
     
     SUPPORT_CHAT_LINK = "https://t.me/HxSupport"
     
