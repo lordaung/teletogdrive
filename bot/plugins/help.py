@@ -73,6 +73,7 @@ def _update(client, message):
         disable_web_page_preview=True,
         reply_to_message_id = message.message_id,
         text = tr.HELP_MSG[msg],      reply_markup = InlineKeyboardMarkup(map(msg))
+    )
 
 def map(pos):
     if(pos==1):
