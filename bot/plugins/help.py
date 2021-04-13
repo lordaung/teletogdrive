@@ -24,7 +24,7 @@ def _start(client, message):
         )
      )
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help', 'about']), group=2)
+@Client.on_message(filters.private & filters.incoming & filters.command(['help']), group=2)
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
@@ -61,9 +61,12 @@ def map(pos):
             [
                 InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")
                 
-            ],
-            [
-                InlineKeyboardButton(text = 'Updates', callback_data = f"update")
+            ]
+        ]
+    else:
+        button = [
+
+                InlineKeyboardButton(text = 'Updates', callback_data = f"update+1")
             ]
         ]
     return button
