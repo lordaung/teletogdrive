@@ -5,7 +5,8 @@ from time import sleep
 from sys import executable
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, RPCError
-from bot import Config, LOGGER
+from bot.config import Config
+from bot import LOGGER
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(SUDO_USERS), group=2)
