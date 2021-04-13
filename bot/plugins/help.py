@@ -12,7 +12,7 @@ def _start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How To Use Me 🤔", f"help+1")
+                    InlineKeyboardButton("How To Use Me ðŸ¤”", f"help+1")
                 ],
                 [
                     InlineKeyboardButton("Update Channel", url="https://t.me/HxBots"),
@@ -64,3 +64,19 @@ def map(pos):
             ],
         ]
     return button
+
+@Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
+def _update(client, message):
+    client.send_message(chat_id = message.chat.id,
+        text = tr.UPDATE_MSG[1],
+        reply_markup = InlineKeyboardMarkup(map(1)),
+        reply_to_message_id = message.message_id
+    )
+
+@Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
+def _about(client, message):
+    client.send_message(chat_id = message.chat.id,
+        text = tr.ABOUT_MSG[1],
+        reply_markup = InlineKeyboardMarkup(map(1)),
+        reply_to_message_id = message.message_id
+    )
