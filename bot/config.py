@@ -57,13 +57,7 @@ class Messages:
         "**Owned By: @HxBots\nCreated By: @Kirodewal**"
         ]
      
-    ABOUT_MSG = ""Hi __{}__,
-       **📝 Language: __Python 3__**
-       **🧰 Framework: __Pyrogram__**
-       **👨‍💻 Developer: [@Kirodewal](https://t.me/Kirodewal)**
-       **📮 Channel: [@HxBots](https://t.me/HxBots)**
-       **👥 Group: [@HXSuppoort](https://t.me/HxSupport)**
-       **💻 Source Code: [Press Me](https://t.me/HxSourceCode/2)**""
+    ABOUT_MSG = ""Hi __{}__,\n\n**📝 Language: __Python 3__**\n\n**🧰 Framework: __Pyrogram__**\n\n**👨‍💻 Developer: [@Kirodewal](https://t.me/Kirodewal)**\n\n**📮 Channel: [@HxBots](https://t.me/HxBots)**\n\n**👥 Group: [@HXSuppoort](https://t.me/HxSupport)**\n\n**💻 Source Code: [Press Me](https://t.me/HxSourceCode/2)**""
      
     UPDATE_MSG = "** Latest Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**"
 
