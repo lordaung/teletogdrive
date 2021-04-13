@@ -1,15 +1,7 @@
 
+from pyrogram import Client, filters
 from bot.config import Messages as tr
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-import os
-import shutil
-from os import execl
-from time import sleep
-from sys import executable
-from pyrogram import Client, filters
-from pyrogram.errors import FloodWait, RPCError
-from ..config import Config
-from bot import LOGGER
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']), group=2)
@@ -61,22 +53,14 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
 
         button = [
-            [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")],
-             InlineKeyboardButton(text = '-->', callback_data = f"help+{pos+1}")
+            [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
 
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")
-                
-            ]
+                InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '-->', callback_data = f"help+{pos+1}")
+            ],
         ]
     return button
-
-@Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
-def _update(client, message):
-    client.send_message(chat_id = message.chat.id,
-        text=tr.UPDATE_MSG.format(message.from_user.first_name),
-        disable_web_page_preview=True
-     )
