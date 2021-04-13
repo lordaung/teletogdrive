@@ -73,10 +73,27 @@ def _update(client, message):
         disable_web_page_preview=True,
         reply_to_message_id = message.message_id
         reply_markup = InlineKeyboardMarkup(
-                 [
-                     [InlineKeyboardButton(text = '-->', callback_data = "update+2")]
+
+def map(pos):
+    if(pos==1):
+        button = [
+            [InlineKeyboardButton(text = '-->', callback_data = "update+2")]
+        ]
+    elif(pos==len(tr.UPDATE_MSG)-1):
+
+        button = [
+            [InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}")]
+
+        ]
+    else:
+        button = [
+            [
+                InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}"),
+                InlineKeyboardButton(text = '-->', callback_data = f"update+{pos+1}")
+            ],
         ]
    )
+    return button
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
