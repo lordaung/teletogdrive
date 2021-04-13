@@ -13,7 +13,8 @@ from bot import LOGGER
      filters.private 
      & filters.incoming 
      & filters.command('log') 
-     & filters.user(Config.SUDO_USERS), group=2)
+     & filters.user(Config.SUDO_USERS)
+)
 
 def _send_log(client, message):
   with open('log.txt', 'rb') as f:
