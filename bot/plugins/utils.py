@@ -3,7 +3,7 @@ import shutil
 from os import execl
 from time import sleep
 from sys import executable
-from pyrogram import Client, filters
+from pyrogram import Client, filters as Filters
 from pyrogram.errors import FloodWait, RPCError
 from bot.config import Config
 from bot import LOGGER
