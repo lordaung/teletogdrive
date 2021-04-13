@@ -63,12 +63,6 @@ def map(pos):
                 
             ]
         ]
-    else:
-        button = [
-
-                InlineKeyboardButton(text = 'Updates', callback_data = f"update+1")
-            ]
-        ]
     return button
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
