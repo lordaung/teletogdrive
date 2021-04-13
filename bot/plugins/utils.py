@@ -13,7 +13,7 @@ from bot import LOGGER
      Filters.private 
      & Filters.incoming 
      & Filters.command('log') 
-     & Filters.user(Config.AUTH_USERS)
+     & ~Filters.user(Config.AUTH_USERS)
 )
 
 def _send_log(client, message):
