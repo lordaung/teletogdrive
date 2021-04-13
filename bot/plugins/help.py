@@ -72,7 +72,11 @@ def _update(client, message):
         text = tr.UPDATE_MSG.format(message.from_user.first_name),
         disable_web_page_preview=True,
         reply_to_message_id = message.message_id
-    )
+        reply_markup = InlineKeyboardMarkup(
+                 [
+                     [InlineKeyboardButton(text = '-->', callback_data = "update+2")]
+        ]
+   )
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
