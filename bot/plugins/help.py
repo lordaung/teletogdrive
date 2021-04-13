@@ -74,14 +74,6 @@ def _update(client, message):
         reply_to_message_id = message.message_id
     )
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
-def _update(client, message):
-    client.send_message(chat_id = message.chat.id,
-        text = tr.UPDATE_MSG,
-        disable_web_page_preview=True,
-        reply_to_message_id = message.message_id
-    )
-       
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
