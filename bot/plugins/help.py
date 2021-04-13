@@ -69,7 +69,7 @@ def map(pos):
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
 def _update(client, message):
     client.send_message(chat_id = message.chat.id,
-        text = tr.UPDATE_MSG[1],
+        text = tr.UPDATE_MSG.format(message.from_user.first_name),
         disable_web_page_preview=True,
         reply_to_message_id = message.message_id
     )
@@ -77,7 +77,7 @@ def _update(client, message):
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
     client.send_message(chat_id = message.chat.id,
-        text = tr.ABOUT_MSG[1],
+        text = tr.ABOUT_MSG.format(message.from_user.first_name),
         reply_to_message_id = message.message_id,
         disable_web_page_preview=True
     )
