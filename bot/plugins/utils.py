@@ -9,7 +9,12 @@ from bot.config import Config
 from bot import LOGGER
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['log']) & filters.user(Config.SUDO_USERS), group=2)
+@Client.on_message(
+     filters.private 
+     & filters.incoming 
+     & filters.command('log') 
+     & filters.user(Config.SUDO_USERS), group=2)
+
 def _send_log(client, message):
   with open('log.txt', 'rb') as f:
     try:
