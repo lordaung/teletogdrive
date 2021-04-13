@@ -69,43 +69,18 @@ def map(pos):
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
 def _update(client, message):
     client.send_message(chat_id = message.chat.id,
-        text = tr.UPDATE_MSG,
-        reply_markup = InlineKeyboardMarkup(map(2)),
+        text = tr.UPDATE2_MSG,
+        disable_web_page_preview=True,
         reply_to_message_id = message.message_id
     )
 
-update_callback_filter = filters.create(lambda _, __, query: query.data.startswith('update+'))
-
-@Client.on_callback_query(update_callback_filter)
-def update_answer(c, callback_query):
-    chat_id = callback_query.from_user.id
-    message_id = callback_query.message.message_id
-    msg = int(callback_query.data.split('+')[1])
-    c.edit_message_text(chat_id = chat_id,    message_id = message_id,
-        text = tr.UPDATE_MSG[msg],    reply_markup = InlineKeyboardMarkup(map(msg))
+@Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
+def _update(client, message):
+    client.send_message(chat_id = message.chat.id,
+        text = tr.UPDATE_MSG,
+        disable_web_page_preview=True,
+        reply_to_message_id = message.message_id
     )
-
-
-def map(pos):
-    if(pos==1):
-        button = [
-            [InlineKeyboardButton(text = '-->', callback_data = "update+1")]
-        ]
-    elif(pos==len(tr.UPDATE_MSG)-1):
-
-        button = [
-            [InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}")]
-
-        ]
-    else:
-        button = [
-            [
-                InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}"),
-                InlineKeyboardButton(text = '-->', callback_data = f"update+{pos+1}")
-            ],
-        ]
-    return button
-
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['about']), group=2)
 def _about(client, message):
