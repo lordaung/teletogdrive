@@ -33,8 +33,9 @@ class BotCommands:
   Delete = ['delete', 'del']
   EmptyTrash = ['emptyTrash']
   YtDl = ['ytdl']
-  Update = ['update', 'upgrade']
-
+  Update = ['update']
+  About = ['about']
+ 
 class Messages:
     START_MSG = "**Hi there {}.**\n__I'm Google Drive Uploader Bot.You can use me to upload any file / video to Google Drive from direct link or Telegram Files.__\n__You can know more from /help.__"
 
@@ -55,6 +56,14 @@ class Messages:
         # Dont remove this ↓ if you respect developer.
         "**Owned By: @HxBots\nCreated By: @Kirodewal**"
         ]
+     
+    ABOUT_MSG = ""Hi __{}__,
+       **📝 Language: __Python 3__**
+       **🧰 Framework: __Pyrogram__**
+       **👨‍💻 Developer: [@Kirodewal](https://t.me/Kirodewal)**
+       **📮 Channel: [@HxBots](https://t.me/HxBots)**
+       **👥 Group: [@HXSuppoort](https://t.me/HxSupport)**
+       **💻 Source Code: [Press Me](https://t.me/HxSourceCode/2)**""
      
     UPDATE_MSG = "** Latest Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**"
 
