@@ -69,7 +69,7 @@ def map(pos):
 @Client.on_message(filters.private & filters.incoming & filters.command(['update']), group=2)
 def _update(client, message):
     client.send_message(chat_id = message.chat.id,
-        text = tr.Update_MSG[2],
+        text = tr.UPDATE_MSG[2],
         reply_markup = InlineKeyboardMarkup(map(2)),
         reply_to_message_id = message.message_id
     )
