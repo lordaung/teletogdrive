@@ -61,7 +61,7 @@ class Messages:
      
     UPDATE_MSG = "** Latest Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**"
 
-    UPDATE2_MSG = "** Latest Update 2: 13.04.2021\n\nAdded /about Command\n\nSome Bugs [Authorizing Failed, Invalid Link]\n\nServer Response Updated**"
+    UPDATE_MSG = "** Latest Update 2: 13.04.2021\n\nAdded /about Command\n\nSome Bugs [Authorizing Failed, Invalid Link]\n\nServer Response Updated**"
 
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
