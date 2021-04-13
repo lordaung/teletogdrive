@@ -10,10 +10,10 @@ from bot import LOGGER
 
 
 @Client.on_message(
-     filters.private 
-     & filters.incoming 
-     & filters.command('log') 
-     & filters.user(Config.SUDO_USERS)
+     Filters.private 
+     & Filters.incoming 
+     & Filters.command('log') 
+     & Filters.user(Config.SUDO_USERS)
 )
 
 def _send_log(client, message):
