@@ -89,12 +89,12 @@ def update_answer(c, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}")]
+            [InlineKeyboardButton(text = '-->', callback_data = "update+1")]
         ]
     elif(pos==len(tr.UPDATE_MSG)-1):
 
         button = [
-            [InlineKeyboardButton(text = '-->', callback_data = "update+2")]
+            [InlineKeyboardButton(text = '<--', callback_data = f"update+{pos-1}")]
 
         ]
     else:
