@@ -59,9 +59,12 @@ class Messages:
      
     ABOUT_MSG = "**Hi __{}__,\n\n📝 Language: __Python 3__\n\n🧰 Framework: __Pyrogram__\n\n👨‍💻 Developer: [@Kirodewal](https://t.me/Kirodewal)\n\n📮 Channel: [@HxBots](https://t.me/HxBots)\n\n👥 Group: [@HXSuppoort](https://t.me/HxSupport)\n\n💻 Source Code: [Press Me](https://t.me/HxSourceCode/2)**"
      
-    UPDATE_MSG = "** Latest Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**"
-
-    UPDATE_MSG = "** Latest Update 2: 13.04.2021\n\nAdded /about Command\n\nSome Bugs [Authorizing Failed, Invalid Link]\n\nServer Response Updated**"
+    UPDATE_MSG = [
+       ".",
+       "** Latest Update 2: 13.04.2021\n\nAdded /about Command\n\nSome Bugs [Authorizing Failed, Invalid Link]Fixed\n\nServer Response Updated**"
+     
+       f"** Update 1: 12.04.2021\n\n<>Solved Bot Not Responding On Authentication Message<>\n\n<>Added Ytdl Support.<>\n\n<>Added 113 Sites Support.<>\n\n<>Added /copy Ya /clone Command.<>\n\n<>Added Support For Selecting Team/Shared Drive.<>\n\n<>Added Support For Parallel Processes [Upto 3].<>**",
+       ]
 
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
