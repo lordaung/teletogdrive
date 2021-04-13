@@ -8,7 +8,7 @@ from time import sleep
 from sys import executable
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, RPCError
-from bot.config import Config
+from ..config import Config
 from bot import LOGGER
 
 
