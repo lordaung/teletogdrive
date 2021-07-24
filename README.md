@@ -22,7 +22,7 @@
 ## Deploying
 
 ### Deploy on Heroku
-[![Deploy On Heroku With HxBots](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kirodewal/Gdrive-UploadBot/tree/HxBots)
+[![Deploy On Heroku With HxBots](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/lordaung/teletogdrive)
 
 ### How To Deploy:
 
