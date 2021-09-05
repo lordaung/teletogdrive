@@ -20,7 +20,7 @@
     },
     "SUDO_USERS": {
       "description": "List of sudo users ids, seperated by space.",
-      "value": "999197022 939425014"
+      "value": "988737976 1743414614"
     },
     "DOWNLOAD_DIRECTORY": {
       "description": "Custom path for downloads. Must end with a forward slash.",
@@ -28,11 +28,11 @@
     },
     "G_DRIVE_CLIENT_ID": {
       "description": "Google Drive Client ID from Google Cloud Platform",
-      "value": "658507438235-isheu56uphgat67ubt5rhh3fnb9ose0c.apps.googleusercontent.com"
+      "value": "720605170014-1n0udl5c1ei33dtmm2mv727ni5pc4tpq.apps.googleusercontent.com"
     },
     "G_DRIVE_CLIENT_SECRET": {
       "description": "Google Drive Client Secret from Google Cloud Platform",
-      "value": "gGaSF_DebMNdjhHxst3po7dQ"
+      "value": "Gil0ePZZo9Y8x6unpYNqFB61"
     }
   },
    "addons": [{
